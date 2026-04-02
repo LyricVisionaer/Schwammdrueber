@@ -8,11 +8,11 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Schwammdrüber Reinigungen Ostschweiz">
   <meta name="keywords" content="Fensterreinigung, Fensterputzer, Glasreinigung, Kalk entfernen, Fensterputzer Ostschweiz, Zürich, Thurgau, St. Gallen">
-  <link rel="canonical" href="https://schwamm-drueber.ch/fensterreinigung">
+  <link rel="canonical" href="https://schwamm-drueber.ch/fensterreinigung.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Fensterreinigung Ostschweiz | Schwammdrüber – streifenfreier Glanz">
   <meta property="og:description" content="Professionelle Fensterreinigung in Zürich, Thurgau & St. Gallen. Streifenfreier Glanz, Entfernung von Kalk & Insektenresten. Jetzt Termin vereinbaren!">
-  <meta property="og:url" content="https://schwamm-drueber.ch/fensterreinigung">
+  <meta property="og:url" content="https://schwamm-drueber.ch/fensterreinigung.html">
   <meta property="og:image" content="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
@@ -118,7 +118,7 @@
       </div>
       <a href="/bewertungen.html">Bewertungen</a>
       <a href="/warum-schwamm-drueber.html">Warum wir?</a>
-      <a href="/#kontakt.html">Kontakt</a>
+      <a href="/#kontakt">Kontakt</a>
     </div>
     <div class="header-phone">
       <a href="tel:0764233681" style="font-weight:600; color:var(--primary);">076 423 36 81</a>
@@ -139,7 +139,7 @@
     <a href="/wohnungsputz-plan.html">Putzplan</a>
     <a href="/bewertungen.html">Bewertungen</a>
     <a href="/warum-schwamm-drueber.html">Warum wir</a>
-    <a href="/#kontakt.html">Kontakt</a>
+    <a href="/#kontakt">Kontakt</a>
     <hr>
     <a href="/impressum.html">Impressum</a>
     <a href="/agb.html">AGB</a>
@@ -175,7 +175,6 @@
     </div>
   </div>
 
-  <!-- Highlight mit rundem Bild (wie auf der Startseite) -->
   <div class="container">
     <div class="service-highlight">
       <div class="image">
@@ -210,7 +209,7 @@
           <li><i class="fas fa-euro-sign"></i> Faire & transparente Preise</li>
           <li><i class="fas fa-clock"></i> Flexible Terminvereinbarung</li>
         </ul>
-        <a href="/#kontakt.html" class="btn btn-primary" style="margin-top:1rem;"><i class="fas fa-envelope"></i> Kostenlose Offerte</a>
+        <a href="/#kontakt" class="btn btn-primary" style="margin-top:1rem;"><i class="fas fa-envelope"></i> Kostenlose Offerte</a>
       </div>
     </div>
   </div>
@@ -221,7 +220,7 @@
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
       <a href="tel:0764233681" class="btn btn-outline" style="background:white; color:var(--primary);"><i class="fas fa-phone"></i> 076 423 36 81</a>
       <a href="https://wa.me/41764233681" class="btn btn-outline" style="background:white; color:var(--primary);"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="/#kontakt.html" class="btn btn-outline" style="background:white; color:var(--primary);"><i class="fas fa-calendar-check"></i> Termin anfragen</a>
+      <a href="/#kontakt" class="btn btn-outline" style="background:white; color:var(--primary);"><i class="fas fa-calendar-check"></i> Termin anfragen</a>
     </div>
   </div></div>
 </main>
@@ -239,7 +238,6 @@
 </div>
 
 <script>
-  // Mobile Menu Toggle
   const menuBtn = document.getElementById('mobileMenuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   if(menuBtn && mobileMenu) {
@@ -248,7 +246,6 @@
     });
   }
   
-  // Dropdown Menüs (klickbar)
   document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', (e) => {
       e.preventDefault();
@@ -262,12 +259,10 @@
     });
   });
   
-  // Schließe Dropdowns bei Klick außerhalb
   document.addEventListener('click', () => {
     document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
   });
   
-  // Back to Top
   document.getElementById('backToTop')?.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
