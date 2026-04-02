@@ -15,8 +15,6 @@
   <meta property="og:url" content="https://schwamm-drueber.ch/">
   <meta property="og:image" content="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Schwammdrüber | Endreinigung mit Abgabegarantie">
-  <meta name="twitter:description" content="Professionelle Endreinigung mit Abgabegarantie in Zürich, Thurgau & St. Gallen.">
   <link rel="icon" type="image/png" href="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,15 +70,24 @@
     .section-sub { font-size: 1.2rem; color: var(--gray); max-width: 700px; margin: 0 auto 3rem auto; text-align: center; }
     .bg-light { background: var(--light-gray); }
     .bg-gradient { background: linear-gradient(120deg, var(--accent-light) 0%, #ffffff 100%); }
-    .card-grid { display: flex; flex-direction: column; gap: 2rem; max-width: 900px; margin: 2rem auto 0; }
-    .service-card { background: white; padding: 2rem 2rem 2rem 2rem; border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.03); }
+    .card-grid { display: flex; flex-direction: column; gap: 2.5rem; max-width: 1000px; margin: 2rem auto 0; }
+    .service-card { background: white; padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.03); display: flex; gap: 2rem; flex-wrap: wrap; }
     .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-    .service-icon { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); }
+    .service-content { flex: 2; }
+    .service-image { flex: 0 0 120px; display: flex; align-items: center; justify-content: center; }
+    .service-image img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 3px solid var(--primary-light); box-shadow: var(--shadow-sm); }
+    .service-icon { font-size: 2rem; margin-bottom: 0.5rem; color: var(--primary); }
     .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
-    .service-card p { margin-bottom: 1rem; line-height: 1.6; }
+    .service-card p { margin-bottom: 0.75rem; line-height: 1.6; }
     .service-card strong { color: var(--primary-dark); }
-    .service-card .btn-link { display: inline-block; margin-top: 0.5rem; color: var(--primary); font-weight: 600; text-decoration: none; }
+    .service-card .highlight { font-weight: 700; color: var(--primary); }
+    .service-card ul { margin: 0.75rem 0 0.75rem 1.5rem; list-style: none; }
+    .service-card ul li { margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.5rem; }
+    .service-card ul li i { color: var(--primary); font-size: 0.9rem; width: 1.2rem; }
+    .service-card .btn-link { display: inline-block; margin-top: 0.75rem; color: var(--primary); font-weight: 600; text-decoration: none; }
     .service-card .btn-link:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .service-card { flex-direction: column; } .service-image { align-self: flex-start; } }
+    
     .two-columns { display: flex; gap: 4rem; align-items: center; flex-wrap: wrap; }
     .two-columns > div { flex: 1; }
     .rounded-image { border-radius: 3rem; width: 100%; object-fit: cover; box-shadow: var(--shadow-md); }
@@ -217,44 +224,80 @@
     <p class="section-sub">Rundum sauber – damit Sie Ihre Wohnung oder Geschäftsräume sorgenfrei übergeben können.</p>
     <div class="card-grid">
       
-      <!-- Endreinigung -->
+      <!-- 1. Endreinigung -->
       <div class="service-card">
-        <div class="service-icon">🧽</div>
-        <h3>Wohnungs-Endreinigungen mit Abgabegarantie</h3>
-        <p><strong>IHR SCHLÜSSELMOMENT. UNSER SCHWAMM-EID.</strong> Wir sehen Staub, den Sie nie sahen. Ihr Vermieter sieht: Nichts.</p>
-        <p><strong>Ihre Vorteile:</strong> Abgabegarantie – kein Nachputzen, kein Ärger. Vermieter-TÜV bestanden – wir kennen jede Ecke, die kontrolliert wird. Sie chillen, während wir schrubben.</p>
-        <p><strong>👉 Vermieter im Glück? Schwammdrüber - Punkt.</strong></p>
-        <a href="/endreinigung-mit-abgabegarantie" class="btn-link">Mehr zur Endreinigung →</a>
+        <div class="service-content">
+          <h3>🧽 Wohnungs-Endreinigungen mit Abgabegarantie</h3>
+          <p><strong>IHR SCHLÜSSELMOMENT. UNSER SCHWAMM-EID.</strong> Wir sehen Staub, den Sie nie sahen. Ihr Vermieter sieht: Nichts.</p>
+          <p><strong>Ihre Vorteile:</strong></p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Abgabegarantie – kein Nachputzen, kein Ärger.</li>
+            <li><i class="fas fa-check-circle"></i> Vermieter-TÜV bestanden – wir kennen jede Ecke, die kontrolliert wird!</li>
+            <li><i class="fas fa-check-circle"></i> Sie chillen, während wir schrubben.</li>
+          </ul>
+          <p><strong>👉 Vermieter im Glück? Schwammdrüber - Punkt.</strong></p>
+          <a href="/endreinigung-mit-abgabegarantie" class="btn-link">Mehr zur Endreinigung →</a>
+        </div>
+        <div class="service-image">
+          <img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Wohnungs%C3%BCbergabe.png" alt="Wohnungsübergabe">
+        </div>
       </div>
       
-      <!-- Fensterreinigung -->
+      <!-- 2. Fensterreinigung -->
       <div class="service-card">
-        <div class="service-icon">✨</div>
-        <h3>Fenster, die glänzen (von innen poetisch, von außen majestätisch)</h3>
-        <p><strong>BLITZBLANKE SCHEIBEN – ZÜRICH BIS BODENSEE.</strong> Fingerabdrücke? Weg. Wasserränder? Geschichte. Sonnenstrahlen? Endlich ungefiltert.</p>
-        <p><strong>Warum wir?</strong> Detektiv-Blick für Details – Fingerabdrücke, Kalkränder, Insektenreste? Geschichte. Ostschweiz-Coverage – von Zürich bis St. Gallen, wir klettern überall hin! Termintreue mit Wetter-Check – wir kommen, wenn's trocken ist.</p>
-        <p><strong>👉 Blick frei? Schwammdrüber - Punkt.</strong></p>
-        <a href="/fensterreinigung" class="btn-link">Mehr zur Fensterreinigung →</a>
+        <div class="service-content">
+          <h3>✨ Fenster, die glänzen (von innen poetisch, von außen majestätisch)</h3>
+          <p><strong>BLITZBLANKE SCHEIBEN – ZÜRICH BIS BODENSEE.</strong> Fingerabdrücke? Weg. Wasserränder? Geschichte. <em>Sonnenstrahlen? Endlich ungefiltert.</em></p>
+          <p><strong>Warum wir?</strong></p>
+          <ul>
+            <li><i class="fas fa-search"></i> Detektiv-Blick für Details – Fingerabdrücke, Kalkränder, Insektenreste? Geschichte.</li>
+            <li><i class="fas fa-map-marked-alt"></i> Ostschweiz-Coverage – von Zürich bis St. Gallen, wir klettern überall hin!</li>
+            <li><i class="fas fa-cloud-sun"></i> Termintreue mit Wetter-Check – wir kommen, wenn's trocken ist – nicht wenn's passt.</li>
+          </ul>
+          <p><strong>👉 Blick frei? Schwammdrüber - Punkt.</strong></p>
+          <a href="/fensterreinigung" class="btn-link">Mehr zur Fensterreinigung →</a>
+        </div>
+        <div class="service-image">
+          <img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fensterreinigung.png" alt="Fensterreinigung">
+        </div>
       </div>
       
-      <!-- Treppenhaus -->
+      <!-- 3. Treppenhaus -->
       <div class="service-card">
-        <div class="service-icon">🪜</div>
-        <h3>Treppenhäuser, die nicht nach "Arbeit" aussehen (sondern nach Wertschätzung)</h3>
-        <p><strong>TREPPENHÄUSER: IHR ERSTER AUFTRITT. UNSERE LEIDENSCHAFT.</strong> Kein "Da-muss-man-leider-durch"-Flair. Sondern: "Hier-bin-ich-gern"-Atmosphäre. Für Mieter, Kunden & Ihr Image.</p>
-        <p><strong>Was ist drin?</strong> Kaugummi-Exorzismus – Spezialtechnik für hartnäckige Überreste (auch den geheimnisvollen Kaugummi unter Stufe 3). Vermieter-Beruhigungspille – ein Besuch im Treppenhaus lohnt sich wieder. Unsere Geheimwaffe? Schweizer Wasser + Deutschschweizer Gründlichkeit.</p>
-        <p><strong>👉 Stufen, die Frieden stiften? Schwammdrüber - Punkt.</strong></p>
-        <a href="/treppenhaus" class="btn-link">Mehr zur Treppenhausreinigung →</a>
+        <div class="service-content">
+          <h3>🪜 Treppenhäuser, die nicht nach "Arbeit" aussehen (sondern nach Wertschätzung)</h3>
+          <p><strong>TREPPENHÄUSER: IHR ERSTER AUFTRITT. UNSERE LEIDENSCHAFT.</strong> Kein "Da-muss-man-leider-durch"-Flair. Sondern: "Hier-bin-ich-gern"-Atmosphäre. Für Mieter, Kunden & Ihr Image.</p>
+          <p><strong>Was ist drin?</strong></p>
+          <ul>
+            <li><i class="fas fa-candy-cane"></i> Kaugummi-Exorzismus – Spezialtechnik für hartnäckige Überreste (auch den geheimnisvollen Kaugummi unter Stufe 3).</li>
+            <li><i class="fas fa-hand-sparkles"></i> Vermieter-Beruhigungspille – ein Besuch im Treppenhaus lohnt sich wieder.</li>
+            <li><i class="fas fa-tint"></i> Unsere Geheimwaffe? Schweizer Wasser + Deutschschweizer Gründlichkeit.</li>
+          </ul>
+          <p><strong>👉 Stufen, die Frieden stiften? Schwammdrüber - Punkt.</strong></p>
+          <a href="/treppenhaus" class="btn-link">Mehr zur Treppenhausreinigung →</a>
+        </div>
+        <div class="service-image">
+          <img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Treppenhaus.png" alt="Treppenhausreinigung">
+        </div>
       </div>
       
-      <!-- Wohnungsräumungen -->
+      <!-- 4. Wohnungsräumungen -->
       <div class="service-card">
-        <div class="service-icon">♻️</div>
-        <h3>Wohnungsräumungen - Perfekt organisiert.</h3>
-        <p><strong>WOHNUNGSRÄUMUNGEN: IHR KOPF, LEER. IHRE WOHNUNG, AUCH.</strong> Räumung? Perfekt organisiert. Gefühle? Optional verpackt. Ihr Stress? Geschichte.</p>
-        <p><strong>Was ist zu erwarten?</strong> "Alles-aus-einer-Hand"-Garantie – von Küchenchrüter bis Omas Kommode: Ein Anruf, alles weg. Restmüll-Detox – fachgerecht entsorgt, nicht illegal deponiert. Schlüsselübergabe inklusive – Räumen + Reinigen + Schlüssel übergeben: Sie müssen nie zurück.</p>
-        <p><strong>👉 Herrschaft über das Chaos? Schwammdrüber - Punkt.</strong></p>
-        <a href="/wohnungsraeumungen" class="btn-link">Mehr zu Räumungen →</a>
+        <div class="service-content">
+          <h3>♻️ Wohnungsräumungen - Perfekt organisiert.</h3>
+          <p><strong>WOHNUNGSRÄUMUNGEN: IHR KOPF, LEER. IHRE WOHNUNG, AUCH.</strong> Räumung? Perfekt organisiert. Gefühle? Optional verpackt. Ihr Stress? Geschichte.</p>
+          <p><strong>Was ist zu erwarten?</strong></p>
+          <ul>
+            <li><i class="fas fa-boxes"></i> "Alles-aus-einer-Hand"-Garantie – von Küchenchrüter bis Omas Kommode: Ein Anruf, alles weg.</li>
+            <li><i class="fas fa-recycle"></i> Restmüll-Detox – fachgerecht entsorgt, nicht illegal deponiert.</li>
+            <li><i class="fas fa-key"></i> Schlüsselübergabe inklusive – Räumen + Reinigen + Schlüssel übergeben: Sie müssen nie zurück.</li>
+          </ul>
+          <p><strong>👉 Herrschaft über das Chaos? Schwammdrüber - Punkt.</strong></p>
+          <a href="/wohnungsraeumungen" class="btn-link">Mehr zu Räumungen →</a>
+        </div>
+        <div class="service-image">
+          <img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/R%C3%A4umungen.png" alt="Wohnungsräumungen">
+        </div>
       </div>
       
     </div>
