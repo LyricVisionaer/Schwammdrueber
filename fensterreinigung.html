@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fensterreinigung Ostschweiz | Schwammdrüber – streifenfreier Glanz</title>
   <meta name="description" content="Professionelle Fensterreinigung in Zürich, Thurgau & St. Gallen. Streifenfreier Glanz, Entfernung von Kalk & Insektenresten. Jetzt Termin vereinbaren!">
-  <link rel="canonical" href="https://schwamm-drueber.ch/fensterreinigung">
+  <link rel="canonical" href="https://lyricvisionaer.github.io/fensterreinigung.html">
   <link rel="icon" type="image/png" href="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #ffffff; color: #1e2a3e; line-height: 1.5; }
@@ -18,9 +20,8 @@
     .btn-primary { background: var(--primary); color: white; }
     .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
     .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
-    .btn-outline:hover { background: var(--primary-light); }
+    .btn-outline:hover { background: var(--primary-light); transform: translateY(-2px); }
     
-    /* Header & Navigation (gleicher Code wie index.html) */
     .header { background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(42,102,161,0.15); position: sticky; top: 0; z-index: 100; }
     .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 2rem; max-width: 1400px; margin: 0 auto; }
     .logo img { height: 55px; width: auto; }
@@ -28,7 +29,7 @@
     .nav-links a { text-decoration: none; font-weight: 500; color: var(--dark); font-size: 0.9rem; }
     .nav-links a:hover { color: var(--primary); }
     .dropdown { position: relative; display: inline-block; }
-    .dropdown-content { display: none; position: absolute; background: white; min-width: 240px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border-radius: 1rem; padding: 0.8rem 0; top: 30px; }
+    .dropdown-content { display: none; position: absolute; background: white; min-width: 240px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); border-radius: 1rem; padding: 0.8rem 0; top: 30px; z-index: 10; }
     .dropdown:hover .dropdown-content { display: block; }
     .dropdown-content a { display: block; padding: 0.5rem 1.2rem; }
     .header-phone { display: flex; align-items: center; gap: 1rem; }
@@ -37,6 +38,8 @@
     
     .hero-inner { background: linear-gradient(120deg, var(--primary-light) 0%, white 100%); padding: 4rem 0; }
     .hero-inner h1 { font-size: 3rem; margin-bottom: 1rem; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .hero-inner .highlight { color: var(--primary); }
+    
     .content-section { padding: 4rem 0; }
     .two-columns { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
     .two-columns > div { flex: 1; }
@@ -44,106 +47,19 @@
     .feature-list li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem; }
     .feature-list i { color: var(--primary); font-size: 1.3rem; }
     .rounded-image { border-radius: 2rem; width: 100%; box-shadow: var(--shadow-md); }
-    .cta-box { background: var(--primary); color: white; padding: 3rem; border-radius: 2rem; text-align: center; margin-top: 3rem; }
+    .info-box { background: var(--primary-light); padding: 2rem; border-radius: 1.5rem; margin: 2rem 0; }
+    .cta-box { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 3rem; border-radius: 2rem; text-align: center; }
     .footer { background: var(--dark); color: #cbd5e1; padding: 3rem 0; margin-top: 3rem; }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
     .footer a { color: #94a3b8; text-decoration: none; }
+    .footer a:hover { color: white; }
     .sticky-buttons { position: fixed; right: 1.5rem; bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; z-index: 99; }
-    .sticky-btn { background: var(--primary); width: 54px; height: 54px; border-radius: 60px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.6rem; box-shadow: var(--shadow-md); }
+    .sticky-btn { background: var(--primary); width: 54px; height: 54px; border-radius: 60px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.6rem; box-shadow: var(--shadow-md); transition: 0.2s; }
+    .sticky-btn:hover { transform: scale(1.08); background: var(--primary-dark); }
     @media (max-width: 768px) { .hero-inner h1 { font-size: 2rem; } .two-columns { flex-direction: column; } }
   </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="nav-container">
-    <div class="logo"><a href="/"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png" alt="Schwammdrüber"></a></div>
-    <div class="nav-links">
-      <a href="/">Start</a>
-      <div class="dropdown"><a href="#">Leistungen <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <a href="/endreinigung-mit-abgabegarantie">Endreinigung mit Garantie</a>
-          <a href="/fensterreinigung">Fensterreinigung</a>
-          <a href="/treppenhaus">Treppenhausreinigung</a>
-          <a href="/wohnungsraeumungen">Wohnungsräumungen</a>
-        </div>
-      </div>
-      <a href="/galerie">Galerie</a>
-      <a href="/reinigungstipps">Tipps</a>
-      <a href="/bewertungen">Bewertungen</a>
-      <a href="/warum-schwamm-drueber">Warum wir?</a>
-      <a href="/#kontakt">Kontakt</a>
-    </div>
-    <div class="header-phone">
-      <a href="tel:0764233681" style="font-weight:600; color:var(--primary);">076 423 36 81</a>
-      <a href="https://wa.me/41764233681" class="btn btn-primary" style="padding:0.6rem 1.4rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-  </div>
-  <div id="mobileMenu" style="display:none; background:white; padding:1rem 2rem; flex-direction:column; gap:0.8rem;">
-    <a href="/">Start</a><a href="/endreinigung-mit-abgabegarantie">Endreinigung</a><a href="/fensterreinigung">Fensterreinigung</a>
-    <a href="/treppenhaus">Treppenhaus</a><a href="/wohnungsraeumungen">Räumungen</a><a href="/galerie">Galerie</a>
-    <a href="/reinigungstipps">Tipps</a><a href="/bewertungen">Bewertungen</a><a href="/#kontakt">Kontakt</a>
-    <hr><a href="/impressum">Impressum</a><a href="/agb">AGB</a><a href="/datenschutzbestimmungen">Datenschutz</a>
-  </div>
-</header>
-
-<main>
-  <div class="hero-inner"><div class="container">
-    <h1>Fensterreinigung in der Ostschweiz <span style="color:var(--primary);">– streifenfreier Glanz</span></h1>
-    <p style="font-size:1.2rem; max-width:700px;">Von Zürich über St. Gallen bis zum Bodensee – wir machen Ihre Fenster makellos sauber. Fingerabdrücke, Kalkränder und Insektenreste? Geschichte.</p>
-    <div style="margin-top:2rem;"><a href="/#kontakt" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Jetzt Termin anfragen</a></div>
-  </div></div>
-
-  <div class="container content-section">
-    <div class="two-columns">
-      <div><h2>Umfassende Reinigung für perfekte Transparenz</h2>
-        <p>Wir beseitigen nicht nur sichtbare Verschmutzungen, sondern entfernen auch mikroskopische Rückstände, die das Erscheinungsbild Ihrer Fenster beeinträchtigen. Das Ergebnis sind spiegelglatte Oberflächen.</p>
-        <ul class="feature-list">
-          <li><i class="fas fa-check-circle"></i> Vollständige Entfernung aller Verschmutzungsarten</li>
-          <li><i class="fas fa-check-circle"></i> Spezielle Reinigungsmittel für streifenfreien Glanz</li>
-          <li><i class="fas fa-check-circle"></i> Flexible Terminvereinbarung</li>
-          <li><i class="fas fa-check-circle"></i> Wetter-Check für optimale Ergebnisse</li>
-        </ul>
-      </div>
-      <div><img class="rounded-image" src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Innenfenster.png" alt="Fensterreinigung Ergebnis"></div>
-    </div>
-  </div>
-
-  <div class="container content-section" style="background:var(--primary-light); border-radius:2rem; padding:3rem;">
-    <div class="two-columns">
-      <div><img class="rounded-image" src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Armaturen%20Badezimmer.png" alt="Detailreinigung"></div>
-      <div><h2>Ihre Vorteile auf einen Blick</h2>
-        <ul class="feature-list">
-          <li><i class="fas fa-map-marker-alt"></i> Servicegebiet: Zürich, Thurgau, St. Gallen</li>
-          <li><i class="fas fa-clock"></i> Termintreue mit Wetterberücksichtigung</li>
-          <li><i class="fas fa-hand-sparkles"></i> Erfahrene Fachkräfte für jede Fensterart</li>
-          <li><i class="fas fa-gem"></i> 100% Zufriedenheitsgarantie</li>
-        </ul>
-        <a href="/#kontakt" class="btn btn-primary"><i class="fas fa-envelope"></i> Kostenlose Offerte</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container"><div class="cta-box">
-    <h3 style="font-size:1.8rem;">Bereit für strahlende Fenster?</h3>
-    <p style="margin:1rem 0;">Vereinbaren Sie noch heute Ihren Termin für eine professionelle Fensterreinigung.</p>
-    <a href="tel:0764233681" class="btn btn-outline" style="background:white; color:var(--primary);"><i class="fas fa-phone"></i> 076 423 36 81</a>
-    <a href="https://wa.me/41764233681" class="btn btn-outline" style="background:white; color:var(--primary); margin-left:1rem;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-  </div></div>
-</main>
-
-<footer class="footer"><div class="container footer-inner">
-  <div>© 2025 Schwammdrüber – Fensterreinigung Ostschweiz</div>
-  <div><a href="/impressum">Impressum</a> | <a href="/agb">AGB</a> | <a href="/datenschutzbestimmungen">Datenschutz</a></div>
-</div></footer>
-
-<div class="sticky-buttons"><a href="tel:0764233681" class="sticky-btn"><i class="fas fa-phone-alt"></i></a><a href="https://wa.me/41764233681" class="sticky-btn"><i class="fab fa-whatsapp"></i></a></div>
-
-<script>
-  document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
-    const m = document.getElementById('mobileMenu'); m.style.display = m.style.display === 'none' ? 'flex' : 'none';
-  });
-</script>
-</body>
-</html>
+  <div class="nav-container
