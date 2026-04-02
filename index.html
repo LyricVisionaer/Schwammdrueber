@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Schwammdrüber | Professionelle Endreinigung mit Abgabegarantie in Zürich, Thurgau & St. Gallen</title>
+  <meta name="description" content="Stressfreie Wohnungsübergabe dank professioneller Endreinigung mit Abgabegarantie. Wir reinigen gründlich – Sie übergeben sorgenfrei. Jetzt unverbindlich anfragen in Zürich, Thurgau, St. Gallen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://schwamm-drueber.ch/">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
+  <link rel="apple-touch-icon" href="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png">
+  
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* Variablen */
+    :root {
+      --primary: #2a66a1;
+      --primary-dark: #1e4a76;
+      --primary-light: #eef4fc;
+      --accent: #81b9d6;
+      --accent-light: #d4eaf5;
+      --dark: #1e2a3e;
+      --gray: #4b5563;
+      --light-gray: #f9fafb;
+      --white: #ffffff;
+      --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      --shadow-md: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.02);
+      --radius: 2rem;
+      --radius-lg: 2.5rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 2px 6px rgba(42,102,161,0.2);
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-outline:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+    }
+    .btn-white {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .btn-white:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    .header {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(42,102,161,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .logo img {
+      height: 55px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--dark);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+    }
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .header-phone .btn { display: none; }
+      .container { padding: 0 1.5rem; }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, rgba(42,102,161,0.05) 0%, rgba(129,185,214,0.2) 100%), url('https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/unsplash_oTvU7Zmteic.jpg?etag=undefined&sourceContentType=image%2Fjpeg&quality=85') center/cover no-repeat;
+      padding: 5rem 0 6rem;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 650px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--gray);
+    }
+
+    /* Sections */
+    section {
+      padding: 5rem 0;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+    .bg-light {
+      background-color: var(--light-gray);
+    }
+    .bg-gradient {
+      background: linear-gradient(120deg, var(--accent-light) 0%, #ffffff 100%);
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .two-columns {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .two-columns > div {
+      flex: 1;
+    }
+    .rounded-image {
+      border-radius: 3rem;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Galerie */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 3px solid white;
+      box-shadow: var(--shadow-sm);
+      transition: 0.2s;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(2,1fr); }
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    /* Formular */
+    .contact-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      font-family: inherit;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(42,102,161,0.1);
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    .footer a:hover { color: white; }
+
+    /* Sticky Buttons */
+    .sticky-buttons {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 99;
+    }
+    .sticky-btn {
+      background: var(--primary);
+      width: 54px;
+      height: 54px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      box-shadow: var(--shadow-md);
+      transition: 0.2s;
+    }
+    .sticky-btn:hover {
+      transform: scale(1.08);
+      background: var(--primary-dark);
+    }
+    .back-to-top {
+      background: var(--accent);
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .hero-content { padding: 1.8rem; }
+      section { padding: 3rem 0; }
+      .section-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Desktop / Mobile -->
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="/"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Fav.png" alt="Schwammdrüber Logo"></a>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="active">Start</a>
+      <a href="#wer">Wer wir sind</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#region">Region</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="header-phone">
+      <a href="tel:0764233681" style="font-weight:600; color:var(--primary);">076 423 36 81</a>
+      <a href="https://wa.me/41764233681" class="btn btn-primary" style="padding:0.6rem 1.4rem;">WhatsApp</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+  </div>
+  <!-- mobile menu drawer (simple) -->
+  <div id="mobileMenu" style="display:none; background:white; border-top:1px solid #eee; padding:1rem 2rem; flex-direction:column; gap:1rem;">
+    <a href="#hero">Start</a><a href="#wer">Wer wir sind</a><a href="#leistungen">Leistungen</a><a href="#galerie">Galerie</a><a href="#region">Region</a><a href="#kontakt">Kontakt</a>
+    <a href="tel:0764233681" style="color:var(--primary);">📞 076 423 36 81</a>
+    <a href="https://wa.me/41764233681" class="btn btn-primary" style="text-align:center;">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Wo andere aufgeben, holen wir den Schwamm raus.</h1>
+        <p>Endreinigung mit Abgabegarantie – für eine sorgenfreie Wohnungsübergabe in Zürich, Thurgau & St. Gallen.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#kontakt" class="btn btn-primary">Jetzt unverbindlich anfragen</a>
+          <a href="#leistungen" class="btn btn-outline">Unsere Leistungen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wer wir sind -->
+  <section id="wer" class="bg-light">
+    <div class="container">
+      <div class="two-columns">
+        <div>
+          <span style="color:var(--primary); font-weight:600;">🧽 Ihr Schlüssel zur sorgenfreien Übergabe</span>
+          <h2 class="section-title">Schwammdrüber – Punkt. Reinigung mit Leidenschaft & Präzision.</h2>
+          <p style="font-size:1.1rem; margin-bottom:1rem;">Wir bieten Wohnungs-Endreinigungen mit Abgabegarantie, makellose Fenster, Treppenhäuser, Büro- und Lagerflächen. Kein Fleck bleibt unentdeckt, kein Vermieter hat etwas auszusetzen. Zusätzlich bieten wir einen professionellen Räumungsservice – ein All-Inclusive-Paket für Ihren Umzug.</p>
+          <p>Unser Servicegebiet: Zürich, Thurgau, St. Gallen. Wir sind Ihr verlässlicher Partner für strahlende Sauberkeit. Vertrauen Sie auf Schweizer Gründlichkeit.</p>
+          <div style="margin-top: 2rem;">
+            <a href="#leistungen" class="btn btn-primary">Unter den Teppich gekehrt? <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div>
+          <img class="rounded-image" src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/unsplash_Ebj87ehFNNU.jpg?etag=undefined&sourceContentType=&quality=85" alt="Professionelle Reinigung">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum wir -->
+  <section id="warum">
+    <div class="container">
+      <div style="text-align:center; max-width:800px; margin:0 auto 3rem auto;">
+        <h2 class="section-title">Warum mit uns arbeiten!?</h2>
+        <p class="section-sub">🧽 Unter uns? Wir machen Schluss mit Schmutz. Schweizer Gründlichkeit trifft auf Abgabegarantie.</p>
+      </div>
+      <div class="card-grid">
+        <div class="service-card"><i class="fas fa-check-circle service-icon"></i><h3>Abgabegarantie</h3><p>Kein Nachputzen, kein Ärger mit Vermietern. Wir übernehmen die volle Verantwortung.</p></div>
+        <div class="service-card"><i class="fas fa-clock service-icon"></i><h3>Termintreue</h3><p>Pünktlich, zuverlässig – wir wissen: Umzüge sind Zeitdruck.</p></div>
+        <div class="service-card"><i class="fas fa-smile service-icon"></i><h3>Mit einem Lächeln</h3><p>Freundlicher Service, der den Umzugsstress vergessen lässt.</p></div>
+        <div class="service-card"><i class="fas fa-truck-moving service-icon"></i><h3>Räumungsservice</h3><p>Von der Küchenzeile bis zur Kommode – wir räumen und entsorgen fachgerecht.</p></div>
+      </div>
+      <div style="text-align:center; margin-top: 3rem;">
+        <a href="/warum-schwamm-drueber" class="btn btn-outline">Warum Schwammdrüber? <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungen (Was wir machen) -->
+  <section id="leistungen" class="bg-gradient">
+    <div class="container">
+      <div style="text-align:center;">
+        <h2 class="section-title">Was machen wir?</h2>
+        <p class="section-sub">Rundum sauber – damit Sie Ihre Wohnung oder Geschäftsräume sorgenfrei übergeben.</p>
+      </div>
+      <div class="card-grid">
+        <div class="service-card"><i class="fas fa-home service-icon"></i><h3>Endreinigung mit Abgabegarantie</h3><p>Wohnungsübergabe? Geschafft. Wir reinigen nach Vermieter-Checkliste – garantiert.</p><a href="/endreinigung-mit-abgabegarantie" style="color:var(--primary); margin-top:1rem; display:inline-block;">Mehr dazu →</a></div>
+        <div class="service-card"><i class="fas fa-window-maximize service-icon"></i><h3>Fensterreinigung</h3><p>Fingerabdrücke, Kalkränder – Geschichte. Strahlender Durchblick von Zürich bis Bodensee.</p><a href="/fensterreinigung" style="color:var(--primary);">Mehr dazu →</a></div>
+        <div class="service-card"><i class="fas fa-stairs service-icon"></i><h3>Treppenhauspflege</h3><p>Wertschätzung von unten bis oben. Kaugummi-Exorzismus inklusive.</p><a href="/treppenhaus" style="color:var(--primary);">Mehr dazu →</a></div>
+        <div class="service-card"><i class="fas fa-dumpster service-icon"></i><h3>Wohnungsräumungen</h3><p>Alles-aus-einer-Hand: Räumen + Reinigen + Schlüsselübergabe.</p><a href="/wohnungsraeumungen" style="color:var(--primary);">Mehr dazu →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section id="galerie">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;">Wie wir putzen – echte Beweise</h2>
+      <p class="section-sub" style="text-align:center;">Bevor-Nachher? Wir liefern Ergebnisse, die überzeugen.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Balkon%20Platten.png?etag=undefined" alt="Balkonreinigung"></div>
+        <div class="gallery-item"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Armaturen%20Badezimmer.png?etag=undefined" alt="Armaturen entkalkt"></div>
+        <div class="gallery-item"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Backofen.png?etag=undefined" alt="Backofenreinigung"></div>
+        <div class="gallery-item"><img src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/Innenfenster.png?etag=null" alt="Fensterreinigung"></div>
+      </div>
+      <div style="text-align:center; margin-top: 2rem;">
+        <a href="/galerie" class="btn btn-outline">Noch mehr Beweise? <i class="fas fa-images"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Region / Wirkungskreis -->
+  <section id="region" class="bg-light">
+    <div class="container">
+      <div class="two-columns">
+        <div>
+          <h2 class="section-title">Wo sind wir unterwegs?</h2>
+          <p class="section-sub" style="margin-bottom:1rem;">Unsere bedienten Kantone: Thurgau, St. Gallen, Zürich. Mit Sitz im Thurgau kehren, wischen und polieren wir für Sie – immer mit Schweizer Gründlichkeit und Termintreue.</p>
+          <ul style="list-style: none; margin-top: 1rem;">
+            <li><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:0.8rem;"></i> <strong>Thurgau</strong> – Frauenfeld, Kreuzlingen, Weinfelden</li>
+            <li><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:0.8rem;"></i> <strong>St. Gallen</strong> – St. Gallen, Rapperswil, Wil</li>
+            <li><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:0.8rem;"></i> <strong>Zürich</strong> – Stadt Zürich, Winterthur, Uster</li>
+          </ul>
+          <div style="margin-top:2rem;">
+            <a href="#kontakt" class="btn btn-primary">Kostenlose Offerte</a>
+          </div>
+        </div>
+        <div>
+          <img class="rounded-image" src="https://impro.usercontent.one/appid/oneComWsb/domain/schwamm-drueber.ch/media/schwamm-drueber.ch/onewebmedia/WhatsApp%20Image%202025-08-18%20at%2013.49.19.jpeg?etag=undefined&quality=85" alt="Wirkungsgebiet Thurgau Zürich St.Gallen" style="max-height: 380px; width:100%; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt + Formular -->
+  <section id="kontakt">
+    <div class="container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 2rem auto;">
+        <h2 class="section-title">Ihre Anfrage: Unser nächster Ehrenauftrag.</h2>
+        <p>Antwortgarantie innerhalb 24 Stunden. Schwammdrauf!</p>
+      </div>
+      <div class="two-columns">
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <label>Name *</label>
+              <input type="text" name="name" required placeholder="Ihr vollständiger Name">
+            </div>
+            <div class="form-group">
+              <label>E-Mail *</label>
+              <input type="email" name="email" required placeholder="ihre@email.ch">
+            </div>
+            <div class="form-group">
+              <label>Telefon (optional)</label>
+              <input type="tel" name="phone" placeholder="Für Rückfragen">
+            </div>
+            <div class="form-group">
+              <label>Nachricht / Anfrage *</label>
+              <textarea rows="4" name="message" required placeholder="Beschreiben Sie Ihr Anliegen – Endreinigung, Fenster, Räumung?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Jetzt unverbindlich anfragen</button>
+            <p style="font-size:0.8rem; margin-top:1rem; text-align:center;">Wir respektieren Ihre Privatsphäre. Keine Werbung, nur Ihre Anfrage.</p>
+          </form>
+        </div>
+        <div>
+          <div style="background: var(--primary-light); padding:2rem; border-radius:2rem;">
+            <h3><i class="fas fa-phone-alt"></i> Direkter Kontakt</h3>
+            <p style="font-size:1.8rem; font-weight:700; margin:1rem 0;"><a href="tel:0764233681" style="color:var(--primary);">076 423 36 81</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:sos@schwamm-drueber.ch">sos@schwamm-drueber.ch</a></p>
+            <hr style="margin:1.5rem 0;">
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/41764233681">WhatsApp Chat</a></p>
+            <p><i class="fas fa-clock"></i> Mo–Fr 08:00–18:00 | Notfall nach Vereinbarung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© 2025 Schwammdrüber – Reinigung mit Abgabegarantie</div>
+    <div><a href="/impressum">Impressum</a> | <a href="/agb">AGB</a> | <a href="/datenschutzbestimmungen">Datenschutz</a></div>
+    <div><i class="fas fa-map-pin"></i> Thurgau · Zürich · St. Gallen</div>
+  </div>
+</footer>
+
+<!-- Sticky Buttons -->
+<div class="sticky-buttons">
+  <a href="tel:0764233681" class="sticky-btn" aria-label="Anrufen"><i class="fas fa-phone-alt"></i></a>
+  <a href="https://wa.me/41764233681" class="sticky-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" id="backToTop" class="sticky-btn back-to-top" aria-label="Nach oben"><i class="fas fa-chevron-up"></i></a>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if(menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      if(mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+        mobileMenu.style.display = 'flex';
+      } else {
+        mobileMenu.style.display = 'none';
+      }
+    });
+  }
+  // Back to top
+  const backBtn = document.getElementById('backToTop');
+  if(backBtn) {
+    backBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === "#" || targetId === "") return;
+      const targetElem = document.querySelector(targetId);
+      if(targetElem) {
+        e.preventDefault();
+        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // close mobile menu on click
+        if(mobileMenu && mobileMenu.style.display === 'flex') mobileMenu.style.display = 'none';
+      }
+    });
+  });
+  // simple contact form simulation (prevent actual page reload - in real integration would send)
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Vielen Dank für Ihre Anfrage! Wir melden uns innerhalb 24h bei Ihnen. Schwammdrüber – Punkt.');
+      contactForm.reset();
+    });
+  }
+</script>
+
+<!-- Friendly Captcha placeholder - (actual implementation would need script, here we keep design but no captcha dependency) -->
+</body>
+</html>
