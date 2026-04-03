@@ -62,10 +62,17 @@
     .content-section a { color: var(--primary); text-decoration: underline; }
     .content-section a:hover { color: var(--primary-dark); }
     
-    .value-card { background: white; border-radius: 1.5rem; padding: 2rem; margin: 1rem 0; box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary); }
-    .value-card i { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; display: inline-block; }
-    .value-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary-dark); }
-    .value-card p { margin-bottom: 0; }
+    /* Kreative Leistungs-Container - NEU und einzigartig */
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0; }
+    .service-card { background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: var(--shadow-sm); transition: all 0.3s; border: 1px solid rgba(0,0,0,0.05); position: relative; overflow: hidden; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+    .service-icon-large { font-size: 2.5rem; margin-bottom: 1rem; display: inline-block; }
+    .service-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary-dark); }
+    .service-card .benefit-list { list-style: none; margin: 1rem 0; }
+    .service-card .benefit-list li { margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+    .service-card .benefit-list li i { color: var(--primary); font-size: 0.8rem; }
+    .service-card .price-badge { display: inline-block; background: var(--primary-light); padding: 0.25rem 0.75rem; border-radius: 60px; font-size: 0.75rem; color: var(--primary); margin-top: 1rem; }
     
     .cta-banner { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; text-align: center; padding: 3rem; border-radius: 2rem; margin: 2rem 0; }
     .cta-banner h3 { font-size: 2rem; margin-bottom: 1rem; }
@@ -83,7 +90,7 @@
     .sticky-btn { background: var(--primary); width: 54px; height: 54px; border-radius: 60px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.6rem; box-shadow: var(--shadow-md); transition: 0.2s; }
     .sticky-btn:hover { transform: scale(1.08); background: var(--primary-dark); }
     
-    @media (max-width: 768px) { .hero-inner h1 { font-size: 2rem; } .content-section { padding: 2rem 0; } .cta-banner h3 { font-size: 1.5rem; } }
+    @media (max-width: 768px) { .hero-inner h1 { font-size: 2rem; } .content-section { padding: 2rem 0; } .cta-banner h3 { font-size: 1.5rem; } .services-grid { grid-template-columns: 1fr; } }
   </style>
   
   <script type="application/ld+json">
@@ -183,28 +190,61 @@
     <h2>Unsere Kernleistungen für Sie:</h2>
     <p>Wir bieten ein umfassendes Leistungspaket, das genau auf die Anforderungen einer Übergabe zugeschnitten ist. Dazu zählen die professionelle Wohnungs-Endreinigung inklusive einer Abgabegarantie, die lückenlose Reinigung von Fenstern bis hin zur Aufwertung von Treppenhäusern sowie die vollständige und organisierte Räumung von Wohnungen.</p>
 
-    <div class="value-card">
-      <i class="fas fa-home"></i>
-      <h3>Wohnungs-Endreinigung mit Abgabegarantie</h3>
-      <p>Wir reinigen gründlich – Sie übergeben sorgenfrei. Sollte Ihr Vermieter Beanstandungen haben, kümmern wir uns um die Nachreinigung – ohne weitere Kosten für Sie.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-window-maximize"></i>
-      <h3>Fensterreinigung für strahlenden Durchblick</h3>
-      <p>Von Zürich über St. Gallen bis zum Bodensee – wir machen Ihre Fenster makellos sauber. Fingerabdrücke, Kalkränder und Insektenreste? Geschichte.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-stairs"></i>
-      <h3>Treppenhausreinigung für Wertschätzung</h3>
-      <p>Kein "Da-muss-man-leider-durch"-Flair. Sondern: "Hier-bin-ich-gern"-Atmosphäre. Für Mieter, Kunden & Ihr Image.</p>
-    </div>
-
-    <div class="value-card">
-      <i class="fas fa-dumpster"></i>
-      <h3>Wohnungsräumungen - Perfekt organisiert</h3>
-      <p>Von kleinen Haushaltsgegenständen bis zu großen Möbelstücken: Wir kümmern uns um die gesamte Räumung Ihrer Wohnung. Ein Anruf genügt, und wir übernehmen alle notwendigen Arbeiten.</p>
+    <!-- Kreative Leistungs-Container - NEU und einzigartig (kein Duplicate der Startseite!) -->
+    <div class="services-grid">
+      
+      <!-- Endreinigung -->
+      <div class="service-card">
+        <div class="service-icon-large">🧽</div>
+        <h3>Wohnungs-Endreinigung</h3>
+        <p><strong>Ihr stressfreier Auszug.</strong> Wir übernehmen den letzten Schliff – damit Sie sich auf das Wesentliche konzentrieren können.</p>
+        <ul class="benefit-list">
+          <li><i class="fas fa-check-circle"></i> 100% Abgabegarantie – schriftlich</li>
+          <li><i class="fas fa-check-circle"></i> Vermieter-Checkliste wird abgearbeitet</li>
+          <li><i class="fas fa-check-circle"></i> Inkl. Nachreinigung, falls nötig</li>
+        </ul>
+        <div class="price-badge">💰 Ab CHF 299.-</div>
+      </div>
+      
+      <!-- Fensterreinigung -->
+      <div class="service-card">
+        <div class="service-icon-large">✨</div>
+        <h3>Fensterreinigung</h3>
+        <p><strong>Blick frei für die neue Heimat.</strong> Streifenfreier Glanz – innen wie aussen. Auch für schwer erreichbare Stellen.</p>
+        <ul class="benefit-list">
+          <li><i class="fas fa-check-circle"></i> Entfernung von Kalk & Insektenresten</li>
+          <li><i class="fas fa-check-circle"></i> Rahmen & Fensterbänke inklusive</li>
+          <li><i class="fas fa-check-circle"></i> Wetter-Check für perfekte Ergebnisse</li>
+        </ul>
+        <div class="price-badge">💰 Ab CHF 149.-</div>
+      </div>
+      
+      <!-- Treppenhausreinigung -->
+      <div class="service-card">
+        <div class="service-icon-large">🪜</div>
+        <h3>Treppenhausreinigung</h3>
+        <p><strong>Der erste Eindruck zählt.</strong> Ein sauberes Treppenhaus hinterlässt Wertschätzung – bei Mietern und Besuchern.</p>
+        <ul class="benefit-list">
+          <li><i class="fas fa-check-circle"></i> Kaugummi-Entfernung inklusive</li>
+          <li><i class="fas fa-check-circle"></i> Geländer & Ecken werden nicht vergessen</li>
+          <li><i class="fas fa-check-circle"></i> Flexible Intervalle (einmalig oder regelmässig)</li>
+        </ul>
+        <div class="price-badge">💰 Individuelles Angebot</div>
+      </div>
+      
+      <!-- Wohnungsräumungen -->
+      <div class="service-card">
+        <div class="service-icon-large">♻️</div>
+        <h3>Wohnungsräumungen</h3>
+        <p><strong>Alles aus einer Hand.</strong> Räumung + Reinigung + Schlüsselübergabe – Sie müssen nie zurück.</p>
+        <ul class="benefit-list">
+          <li><i class="fas fa-check-circle"></i> Fachgerechte Entsorgung & Recycling</li>
+          <li><i class="fas fa-check-circle"></i> Auch für Haushaltsauflösungen</li>
+          <li><i class="fas fa-check-circle"></i> Transparente Preise ohne versteckte Kosten</li>
+        </ul>
+        <div class="price-badge">💰 Kostenlose Besichtigung</div>
+      </div>
+      
     </div>
 
     <h2>Unsere Grundsätze: Schweizer Gründlichkeit und Verlässlichkeit</h2>
